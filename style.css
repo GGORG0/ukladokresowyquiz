@@ -65,6 +65,10 @@ body {
   background-color: var(--ctp-mocha-red);
 }
 
+input[type="radio"] {
+  filter: invert(1);
+}
+
 button {
   background-color: var(--ctp-mocha-surface1);
   border: 1px solid var(--ctp-mocha-overlay1);

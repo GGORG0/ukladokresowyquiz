@@ -1,4 +1,5 @@
 let quizElements = [];
+let quizType = "symbole";
 
 let notifier = new AWN({
   icons: { enabled: false },
@@ -54,8 +55,9 @@ function nextQuestion() {
   const elementCell = document.querySelector(`#periodic-table > tbody > tr > td.element:not(.empty)[data-symbol="${element}"]`);
   elementCell.classList.add("question");
   const question = document.querySelector("#question");
-  question.textContent = elementCell.dataset.name;
-  question.dataset.answer = element;
+  question.textContent = quizType === "symbole" ? elementCell.dataset.name : elementCell.dataset.symbol;
+  question.dataset.answer = quizType === "symbole" ? elementCell.dataset.symbol : elementCell.dataset.name;
+  question.dataset.symbol = element;
   document.querySelector("#answer").value = "";
 
   elementCell.dataset.timesAsked++;
@@ -64,7 +66,9 @@ function nextQuestion() {
 function checkAnswer() {
   const correct = document.querySelector("#question").dataset.answer;
   const user = document.querySelector("#answer").value;
-  const element = document.querySelector(`#periodic-table > tbody > tr > td.element:not(.empty)[data-symbol="${correct}"]`);
+
+  const symbol = document.querySelector("#question").dataset.symbol;
+  const element = document.querySelector(`#periodic-table > tbody > tr > td.element:not(.empty)[data-symbol="${symbol}"]`);
   const elementName = element.dataset.name;
   if (correct === user) {
     element.dataset.correct++;
@@ -109,6 +113,8 @@ function startQuiz() {
     event.preventDefault();
     checkAnswer();
   });
+
+  quizType = document.querySelector("#quiz-symbole").checked ? "symbole" : "nazwy";
 
   nextQuestion();
 }
