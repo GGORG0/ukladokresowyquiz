@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Quiz z układu okresowego</title>
+    <meta name="description" content="Przetestuj swoją znajomość pierwiastków i ich symboli">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="notify/style.css">
+    <script src="notify/index.var.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+            your experience.
+            </p>
+        <![endif]-->
+
+    <div id="container">
+        <main>
+            <span id="question">Zacznij quiz!</span>
+
+            <form>
+                <input type="text" id="answer" disabled>
+            </form>
+
+            <div id="stats">
+                <span id="correct">Poprawne: <span>0</span></span>
+                <span id="incorrect">Niepoprawne: <span>0</span></span>
+                <span id="sum">Suma: <span>0</span></span>
+            </div>
+        </main>
+
+        <aside>
+            <span id="aside-title">Wybierz pierwiastki do quizu</span>
+
+            <table id="periodic-table">
+                <tbody>
+                    <tr>
+                        <td class="element empty"></td>
+                        <th class="column-button">1</th>
+                        <th class="column-button">2</th>
+                        <th class="column-button">3</th>
+                        <th class="column-button">4</th>
+                        <th class="column-button">5</th>
+                        <th class="column-button">6</th>
+                        <th class="column-button">7</th>
+                        <th class="column-button">8</th>
+                        <th class="column-button">9</th>
+                        <th class="column-button">10</th>
+                        <th class="column-button">11</th>
+                        <th class="column-button">12</th>
+                        <th class="column-button">13</th>
+                        <th class="column-button">14</th>
+                        <th class="column-button">15</th>
+                        <th class="column-button">16</th>
+                        <th class="column-button">17</th>
+                        <th class="column-button">18</th>
+                    </tr>
+                    <tr>
+                        <th class="row-button">1</th>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                    </tr>
+                    <tr>
+                        <th class="row-button">2</th>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                    </tr>
+                    <tr>
+                        <th class="row-button">3</th>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                    </tr>
+                    <tr>
+                        <th class="row-button">4</th>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                    </tr>
+                    <tr>
+                        <th class="row-button">5</th>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                    </tr>
+                    <tr>
+                        <th class="row-button">6</th>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                    </tr>
+                    <tr>
+                        <th class="row-button">7</th>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                        <td class="element empty"></td>
+                    </tr>
+                </tbody>
+            </table> <button id="start-quiz" type="button">Start!</button>
+        </aside>
+    </div>
+</body>
+
+</html>
