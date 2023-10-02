@@ -69,7 +69,7 @@ function checkAnswer() {
 
   const symbol = document.querySelector("#question").dataset.symbol;
   const element = document.querySelector(`#periodic-table > tbody > tr > td.element:not(.empty)[data-symbol="${symbol}"]`);
-  const elementName = element.dataset.name;
+  const elementName = quizType === "symbole" ? element.dataset.name : element.dataset.symbol;
   if (correct.toLowerCase() === user.toLowerCase()) {
     element.dataset.correct++;
     stats.correct.textContent = Number.parseInt(stats.correct.textContent) + 1;
