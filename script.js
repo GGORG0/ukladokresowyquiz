@@ -2,6 +2,7 @@ let quizElements = [];
 let quizType = "symbole";
 
 let notifier = new AWN({
+  position: "top-left",
   icons: { enabled: false },
   durations: {
     success: 1000,
