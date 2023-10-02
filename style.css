@@ -1,12 +1,12 @@
 @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
-@import url("https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto%20Slab:400,500,700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Inter, sans-serif;
+  font-family: Roboto Slab, sans-serif;
   background-color: var(--ctp-mocha-base);
   color: var(--ctp-mocha-text);
 }
@@ -31,8 +31,6 @@ body {
 .element,
 .column-button,
 .row-button {
-  font-family: serif;
-
   display: table-cell;
   text-align: center;
 
