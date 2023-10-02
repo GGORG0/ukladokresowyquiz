@@ -82,13 +82,22 @@ function checkAnswer() {
   }
   stats.total.textContent = Number(stats.total.textContent) + 1;
 
-  if (element.dataset.correct >= element.dataset.incorrect) {
+
+  const correctPercentage = Number.parseInt(element.dataset.correct) / (Number.parseInt(element.dataset.correct) + Number.parseInt(element.dataset.incorrect));
+  if (correctPercentage > 0.5) {
     element.classList.add("correct");
     element.classList.remove("incorrect");
+    element.classList.remove("half-correct");
   }
-  else if (element.dataset.correct < element.dataset.incorrect) {
+  else if (correctPercentage >= 0.1) {
+    element.classList.add("half-correct");
+    element.classList.remove("correct");
+    element.classList.remove("incorrect");
+  }
+  else {
     element.classList.add("incorrect");
     element.classList.remove("correct");
+    element.classList.remove("half-correct");
   }
 
   nextQuestion();
